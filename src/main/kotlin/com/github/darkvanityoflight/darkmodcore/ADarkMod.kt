@@ -5,6 +5,10 @@ import java.util.logging.Level
 
 abstract class ADarkMod : IAmADarkMod, JavaPlugin() {
 
+    override fun onEnable() {
+        IAmADarkMod.instance = this
+    }
+
     override fun debug(message: String?) {
         if (config.getBoolean("debug", false)) logger.log(Level.INFO, message)
     }
