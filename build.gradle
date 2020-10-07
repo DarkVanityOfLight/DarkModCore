@@ -1,0 +1,34 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.4.0'
+    id "ru.endlesscode.bukkitgradle" version "0.8.2"
+}
+
+group 'com.github.darkvanityoflight.darkmodcore'
+version '1.0-SNAPSHOT'
+description 'The base plugin for all of my Minecraft plugins'
+
+repositories {
+    mavenCentral()
+    spigot()
+}
+
+dependencies {
+    compileOnly spigotApi()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+}
+
+bukkit {
+    version = "1.16.3"
+
+    meta {
+        name = "DarkModCore"
+        description = 'The base plugin for all of my Minecraft plugins'
+        main = "com.github.darkvanityoflight.darkmodcore.DarkModCore"
+        version = version
+        authors = ["DarkVanityOfLight"]
+    }
+
+}
