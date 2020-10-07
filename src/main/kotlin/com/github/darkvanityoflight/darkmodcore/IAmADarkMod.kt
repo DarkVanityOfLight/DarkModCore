@@ -18,7 +18,7 @@ interface IAmADarkMod {
 
     fun warning(message: String?)
     fun warning(message: String?, error: Throwable?)
-    fun warning(message: String?, error: Throwable?, vararg vars: Any?)
+    fun warning(message: String?, vararg vars: Any?)
 
     fun info(message: String?)
     fun info(message: String?, vararg vars: Any?)
