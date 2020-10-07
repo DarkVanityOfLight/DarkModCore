@@ -1,10 +1,10 @@
 package com.github.darkvanityoflight.darkmodcore
 
-import com.github.darkvanityoflight.darkmodcore.configparser.IParse
+import com.github.darkvanityoflight.darkmodcore.configparser.ADarkModConfigParser
 
 
 interface IAmADarkMod {
-    var configParser : IParse?
+    var configParser : ADarkModConfigParser
 
     companion object{
         lateinit var instance : IAmADarkMod
