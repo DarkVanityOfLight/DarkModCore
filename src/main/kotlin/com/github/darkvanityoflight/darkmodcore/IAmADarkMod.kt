@@ -4,7 +4,6 @@ import com.github.darkvanityoflight.darkmodcore.configparser.ADarkModConfigParse
 
 
 interface IAmADarkMod {
-    var configParser : ADarkModConfigParser
 
     companion object{
         lateinit var instance : IAmADarkMod
