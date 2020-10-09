@@ -1,6 +1,5 @@
 package com.github.darkvanityoflight.darkmodcore
 
-import com.github.darkvanityoflight.darkmodcore.configparser.ADarkModConfigParser
 
 
 interface IAmADarkMod {
