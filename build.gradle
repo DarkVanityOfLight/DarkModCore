@@ -36,3 +36,21 @@ bukkit {
     }
 
 }
+
+publishing {
+    publications {
+        DarkModCore(MavenPublication) {
+            groupId = 'com.github.darkvanityoflight'
+            artifactId = rootProject.name
+            version = this.version
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = 'DarkMods'
+            url 'https://repo.repsy.io/mvn/darkvanityoflight/darkmods'
+        }
+    }
+}
