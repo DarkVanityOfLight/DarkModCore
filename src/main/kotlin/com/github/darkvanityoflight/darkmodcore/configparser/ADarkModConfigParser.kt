@@ -1,4 +1,6 @@
 package com.github.darkvanityoflight.darkmodcore.configparser
 
-abstract class ADarkModConfigParser : IParse {
+import org.bukkit.configuration.file.FileConfiguration
+
+abstract class ADarkModConfigParser(val config: FileConfiguration) : IParse {
 }
