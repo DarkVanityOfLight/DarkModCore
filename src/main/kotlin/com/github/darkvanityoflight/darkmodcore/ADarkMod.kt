@@ -5,8 +5,12 @@ import java.util.logging.Level
 
 abstract class ADarkMod : IAmADarkMod, JavaPlugin() {
 
+    companion object {
+        lateinit var instance : ADarkMod
+    }
+
     override fun onEnable() {
-        IAmADarkMod.instance = this
+        instance = this
     }
 
     override fun debug(message: String?) {

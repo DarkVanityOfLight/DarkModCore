@@ -4,9 +4,6 @@ package com.github.darkvanityoflight.darkmodcore
 
 interface IAmADarkMod {
 
-    companion object{
-        lateinit var instance : IAmADarkMod
-    }
 
     fun debug(message : String?)
     fun debug(message: String?, vararg vars: Any?)
