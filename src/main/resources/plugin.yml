@@ -1,0 +1,20 @@
+
+commands:
+  load:
+    description: "Load and enable a plugin"
+    permission: "darkmodcore.loadPlugin"
+    usage: "/load <pluginname>"
+
+  unload:
+    description: "Unload and disable a plugin"
+    permission: "darkmodcore.unload"
+    usage: "/unload <pluginname>"
+
+permissions:
+  darkmodcore.loadPlugin:
+    description: "Lets you load a plugin"
+    default: false
+
+  darkmodcore.unload:
+    description: "Lets you unload a plugin"
+    default: false
