@@ -1,13 +1,6 @@
 # RecraftedCore
 The Core Plugin, for all following Minecraft Plugins from me
 
-This Plugin has no real functionality at the moment, it just bundels some
-utils and provides interfaces for my other mods.
-
-Even though there is no actuall plugin use in the game, all other of my plugins
-depend on this plugin beeing there, so if you want to use them you need this plugin
-in your plugins folder.
-
 
 ## License:
 ```
