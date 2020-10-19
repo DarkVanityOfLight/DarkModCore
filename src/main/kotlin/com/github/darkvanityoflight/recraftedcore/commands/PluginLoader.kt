@@ -1,6 +1,6 @@
-package com.github.darkvanityoflight.darkmodcore.commands
+package com.github.darkvanityoflight.recraftedcore.commands
 
-import com.github.darkvanityoflight.darkmodcore.ADarkMod
+import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
@@ -13,7 +13,7 @@ import org.bukkit.plugin.UnknownDependencyException
 import java.io.File
 
 
-class PluginLoader(val plugin: ADarkMod) : CommandExecutor {
+class PluginLoader(val plugin: ARecraftedPlugin) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         return if (sender is Player) {
             if (sender.hasPermission("darkmodcore.loadPlugin")) {

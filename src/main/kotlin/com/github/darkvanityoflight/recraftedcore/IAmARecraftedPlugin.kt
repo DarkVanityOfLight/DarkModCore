@@ -1,8 +1,8 @@
-package com.github.darkvanityoflight.darkmodcore
+package com.github.darkvanityoflight.recraftedcore
 
 
 
-interface IAmADarkMod {
+interface IAmARecraftedPlugin {
 
 
     fun debug(message : String?)

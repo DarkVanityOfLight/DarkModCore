@@ -1,7 +1,7 @@
-package com.github.darkvanityoflight.darkmodcore.tagutils
+package com.github.darkvanityoflight.recraftedcore.tagutils
 
-import com.github.darkvanityoflight.darkmodcore.ADarkMod
-import com.github.darkvanityoflight.darkmodcore.tagutils.persistentdatatypes.StringArrayItemTagType
+import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin
+import com.github.darkvanityoflight.recraftedcore.tagutils.persistentdatatypes.StringArrayItemTagType
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
@@ -12,7 +12,7 @@ class TagManager {
     private var persistentDataContainer : PersistentDataContainer
     var itemMeta : ItemMeta? = null
 
-    constructor(plugin : ADarkMod, itemMeta: ItemMeta){
+    constructor(plugin : ARecraftedPlugin, itemMeta: ItemMeta){
         this.itemMeta = itemMeta
     }
 

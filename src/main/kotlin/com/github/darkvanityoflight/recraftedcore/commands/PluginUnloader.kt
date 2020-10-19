@@ -1,6 +1,6 @@
-package com.github.darkvanityoflight.darkmodcore.commands
+package com.github.darkvanityoflight.recraftedcore.commands
 
-import com.github.darkvanityoflight.darkmodcore.ADarkMod
+import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
@@ -16,7 +16,7 @@ import java.net.URLClassLoader
 import java.util.*
 
 
-class PluginUnloader(val plugin: ADarkMod) : CommandExecutor{
+class PluginUnloader(val plugin: ARecraftedPlugin) : CommandExecutor{
 
     private fun getPlugin(pl: String): Plugin? {
         return if (Bukkit.getPluginManager().isPluginEnabled(pl)){

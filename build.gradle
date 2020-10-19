@@ -6,7 +6,7 @@ plugins {
     id "org.hibernate.build.maven-repo-auth" version "3.0.4"
 }
 
-group 'com.github.darkvanityoflight.darkmodcore'
+group 'com.github.darkvanityoflight.recraftedcore'
 version '1.3-SNAPSHOT'
 description 'The base plugin for all of my Minecraft plugins'
 
@@ -26,9 +26,9 @@ dependencies {
 
 bukkit {
     meta {
-        name = "DarkModCore"
+        name = "RecraftedCore"
         description = 'The base plugin for all of my Minecraft plugins'
-        main = "com.github.darkvanityoflight.darkmodcore.DarkModCore"
+        main = "com.github.darkvanityoflight.recraftedcore"
         version = version
         authors = ["DarkVanityOfLight"]
     }
@@ -37,7 +37,7 @@ bukkit {
 
 publishing {
     publications {
-        DarkModCore(MavenPublication) {
+        RecraftedMod(MavenPublication) {
             groupId = 'com.github.darkvanityoflight'
             artifactId = rootProject.name
             version = this.version

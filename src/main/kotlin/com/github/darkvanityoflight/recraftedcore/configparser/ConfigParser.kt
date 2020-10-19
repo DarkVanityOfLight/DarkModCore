@@ -1,4 +1,4 @@
-package com.github.darkvanityoflight.darkmodcore.configparser
+package com.github.darkvanityoflight.recraftedcore.configparser
 
 import org.bukkit.configuration.file.FileConfiguration
 

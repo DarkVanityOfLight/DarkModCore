@@ -1,4 +1,4 @@
-# DarkModCore
+# RecraftedCore
 The Core Plugin, for all following Minecraft Plugins from me
 
 This Plugin has no real functionality at the moment, it just bundels some
@@ -24,7 +24,7 @@ from other plugins standard library, ignore those warnings, I try to fix it but 
 
 For the main class do:
 ```
-class MyPlugin : ADarkMod {
+class MyPlugin : ARecraftedPlugin {
 
       override fun onEnable() {
         super.onEnable()

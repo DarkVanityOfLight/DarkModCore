@@ -1,12 +1,12 @@
-package com.github.darkvanityoflight.darkmodcore
+package com.github.darkvanityoflight.recraftedcore
 
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Level
 
-abstract class ADarkMod : IAmADarkMod, JavaPlugin() {
+abstract class ARecraftedPlugin : IAmARecraftedPlugin, JavaPlugin() {
 
     companion object {
-        lateinit var instance : ADarkMod
+        lateinit var instance : ARecraftedPlugin
     }
 
     override fun onEnable() {
