@@ -28,7 +28,7 @@ bukkit {
     meta {
         name = "RecraftedCore"
         description = 'The base plugin for all of my Minecraft plugins'
-        main = "com.github.darkvanityoflight.recraftedcore"
+        main = "com.github.darkvanityoflight.recraftedcore.RecraftedPluginCore"
         version = version
         authors = ["DarkVanityOfLight"]
     }
