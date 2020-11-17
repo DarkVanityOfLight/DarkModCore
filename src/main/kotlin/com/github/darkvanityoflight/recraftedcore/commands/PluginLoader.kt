@@ -16,7 +16,7 @@ import java.io.File
 class PluginLoader(val plugin: ARecraftedPlugin) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         return if (sender is Player) {
-            if (sender.hasPermission("darkmodcore.loadPlugin")) {
+            if (sender.hasPermission("recraftedcore.loadPlugin")) {
 
 
                 true

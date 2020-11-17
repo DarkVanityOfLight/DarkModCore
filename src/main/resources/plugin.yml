@@ -1,19 +1,19 @@
 commands:
   load:
     description: "Load and enable a plugin"
-    permission: "darkmodcore.loadPlugin"
+    permission: "recraftedcore.loadPlugin"
     usage: "/load <pluginname>"
 
   unload:
     description: "Unload and disable a plugin"
-    permission: "darkmodcore.unload"
+    permission: "recraftedcore.unload"
     usage: "/unload <pluginname>"
 
 permissions:
-  darkmodcore.loadPlugin:
+  recraftedcore.loadPlugin:
     description: "Lets you load a plugin"
     default: false
 
-  darkmodcore.unload:
+  recraftedcore.unload:
     description: "Lets you unload a plugin"
     default: false

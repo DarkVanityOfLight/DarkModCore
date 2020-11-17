@@ -124,7 +124,7 @@ class PluginUnloader(val plugin: ARecraftedPlugin) : CommandExecutor{
     }
 
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
-        if(!sender.hasPermission("darkmodcore.unload")) { sender.sendMessage("You are not allowed to unload plugins, so fuck off"); return false}
+        if(!sender.hasPermission("recraftedcore.unload")) { sender.sendMessage("You are not allowed to unload plugins, so fuck off"); return false}
         val pl = getPlugin(args[0])
         return if (pl == null){
             sender.sendMessage(ChatColor.RED.toString() + "Plugin ${args[0]} is not enabled, this is case sensitive.")
