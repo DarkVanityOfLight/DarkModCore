@@ -9,7 +9,7 @@ class RecraftedPluginCore : ARecraftedPlugin() {
 
     override fun onEnable() {
         super.onEnable()
-        info("[DarkModCore] Enabling DarkModCore")
+        info("Enabling RecraftedCore")
 
         this.getCommand("load")?.setExecutor(PluginLoader(this))
         this.getCommand("unload")?.setExecutor(PluginUnloader(this))
