@@ -1,7 +1,7 @@
-package com.github.darkvanityoflight.recraftedcore.tagutils
+package com.github.darkvanityoflight.recraftedcore.utils.tagutils
 
 import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin
-import com.github.darkvanityoflight.recraftedcore.tagutils.persistentdatatypes.StringArrayItemTagType
+import com.github.darkvanityoflight.recraftedcore.utils.tagutils.persistentdatatypes.StringArrayItemTagType
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta

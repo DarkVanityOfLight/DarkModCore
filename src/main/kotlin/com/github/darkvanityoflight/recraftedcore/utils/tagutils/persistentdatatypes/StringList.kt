@@ -1,4 +1,4 @@
-package com.github.darkvanityoflight.recraftedcore.tagutils.persistentdatatypes
+package com.github.darkvanityoflight.recraftedcore.utils.tagutils.persistentdatatypes
 
 import org.bukkit.persistence.PersistentDataAdapterContext
 import org.bukkit.persistence.PersistentDataType
