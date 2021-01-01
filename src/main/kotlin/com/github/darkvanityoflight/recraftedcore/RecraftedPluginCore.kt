@@ -10,8 +10,13 @@ class RecraftedPluginCore : ARecraftedPlugin() {
     override fun onEnable() {
         super.onEnable()
         info("Enabling RecraftedCore")
+        plugin = this
 
         this.getCommand("load")?.setExecutor(PluginLoader(this))
         this.getCommand("unload")?.setExecutor(PluginUnloader(this))
+    }
+
+    companion object {
+        lateinit var plugin: RecraftedPluginCore
     }
 }
