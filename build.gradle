@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.github.darkvanityoflight.recraftedcore'
-version '2.3-SNAPSHOT'
+version '2.4-SNAPSHOT'
 description 'The base plugin for all of my Minecraft plugins'
 
 repositories {
