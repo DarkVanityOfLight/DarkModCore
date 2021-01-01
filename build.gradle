@@ -47,7 +47,7 @@ publishing {
     }
     repositories {
         maven {
-            name = 'DarkMods'
+            name = 'Recrafted'
             url 'https://repo.repsy.io/mvn/darkvanityoflight/darkmods'
         }
     }
