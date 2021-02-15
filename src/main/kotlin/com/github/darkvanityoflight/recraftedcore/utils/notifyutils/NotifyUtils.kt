@@ -1,6 +1,6 @@
 package com.github.darkvanityoflight.recraftedcore.utils.notifyutils
 
-import com.github.darkvanityoflight.recraftedcore.RecraftedPluginCore
+import com.github.darkvanityoflight.recraftedcore.Main
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.boss.BarColor
@@ -27,7 +27,7 @@ fun notify(title : String, color : BarColor, style : BarStyle, displayTime : Int
     bar.isVisible = true;
 
     if (displayTime != 0){
-        TimerRunnable(bar).runTaskLater(RecraftedPluginCore.plugin, (displayTime*20).toLong())
+        TimerRunnable(bar).runTaskLater(Main.plugin, (displayTime*20).toLong())
     }
 
     return bar
