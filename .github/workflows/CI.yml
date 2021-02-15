@@ -181,8 +181,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo 'username=darkvanityoflight\n' >> local.properties
-          echo 'password=${{ secrets.MVN_KEY }}\n' >> local.properties
+          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Publish
         run: ./gradlew publish
