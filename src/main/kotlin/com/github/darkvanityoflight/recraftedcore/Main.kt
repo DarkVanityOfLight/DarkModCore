@@ -4,7 +4,7 @@ import com.github.darkvanityoflight.recraftedcore.commands.PluginLoader
 import com.github.darkvanityoflight.recraftedcore.commands.PluginUnloader
 import com.github.darkvanityoflight.recraftedcore.configparser.ConfigParser
 
-class RecraftedPluginCore : ARecraftedPlugin() {
+class Main : ARecraftedPlugin() {
     var configParser: ConfigParser = ConfigParser(config)
 
     override fun onEnable() {
@@ -17,6 +17,6 @@ class RecraftedPluginCore : ARecraftedPlugin() {
     }
 
     companion object {
-        lateinit var plugin: RecraftedPluginCore
+        lateinit var plugin: Main
     }
 }
