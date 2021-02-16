@@ -13,8 +13,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
-          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+          echo -e '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo -e 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Build
         run: ./gradlew build -x test
@@ -42,8 +42,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
-          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+          echo -e '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo -e 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Run the tests
         run: ./gradlew test
@@ -63,8 +63,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
-          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+          echo -e '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo -e 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Build
         run: ./gradlew shadowJar -x test
@@ -83,8 +83,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
-          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+          echo -e '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo -e 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Generate docs
         run: ./gradlew dokkaHtml
@@ -202,8 +202,8 @@ jobs:
 
       - name: Set credentials
         run: |
-          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
-          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+          echo -e '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo -e 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
 
       - name: Publish
         run: ./gradlew publish
