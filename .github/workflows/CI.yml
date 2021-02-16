@@ -11,6 +11,11 @@ jobs:
       - name: Checkout code
         uses: actions/Checkout@v2
 
+      - name: Set credentials
+        run: |
+          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+
       - name: Build
         run: ./gradlew build -x test
 
@@ -35,6 +40,11 @@ jobs:
           name: Dev-Build
           path: build/
 
+      - name: Set credentials
+        run: |
+          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+
       - name: Run the tests
         run: ./gradlew test
       - name: Upload test results
@@ -51,6 +61,11 @@ jobs:
       - name: Checkout code
         uses: actions/Checkout@v2
 
+      - name: Set credentials
+        run: |
+          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+
       - name: Build
         run: ./gradlew shadowJar -x test
       - name: Upload Artifacts
@@ -65,6 +80,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/Checkout@v2
+
+      - name: Set credentials
+        run: |
+          echo '\nRecraftedCivilizationsUsername=darkvanityoflight\n' >> gradle.properties
+          echo 'RecraftedCivilizationsPassword=${{ secrets.MVN_KEY }}\n' >> gradle.properties
+
       - name: Generate docs
         run: ./gradlew dokkaHtml
       - name: Upload Artifacts
