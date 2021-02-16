@@ -4,6 +4,12 @@ import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
 /**
+ * @author DarkVanityOfLight
+ * This GUI manager and all classes of the GUI toolkit
+ * are inspired by the CivModCore GUI toolkit
+ */
+
+/**
  * Represents a item with functionality when clicked inside a [InventoryGUI]
  * @constructor The Item stack as which this should be displayed
  */

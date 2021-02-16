@@ -6,6 +6,12 @@ import org.bukkit.event.inventory.InventoryType
 import org.bukkit.inventory.Inventory
 
 /**
+ * @author DarkVanityOfLight
+ * This GUI manager and all classes of the GUI toolkit
+ * are inspired by the CivModCore GUI toolkit
+ */
+
+/**
  * This represents an inventory GUI consisting of different implementations of the [DisplayItem] interface.
  * To have a item work as clickable GUI item extend the [Clickable] class and overwrite
  * the onClick method
