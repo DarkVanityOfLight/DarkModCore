@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'com.github.darkvanityoflight.recraftedcore'
-version '2.4-SNAPSHOT'
+version '3.0-SNAPSHOT'
 description 'The base plugin for all of my Minecraft plugins'
 
 // plugin.yml values
@@ -27,6 +27,8 @@ dependencies {
 }
 
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+    implementation 'junit:junit:4.12'
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 }
 
