@@ -8,6 +8,11 @@ import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
+/**
+ * The factory for the [CloseButton], do not create a close button
+ * manually call [getCloseButton] to get a close button with a barrier
+ * as icon and the correct name and lore.
+ */
 object CloseButtonFactory{
     private val closeItemStack = ItemStack(Material.BARRIER)
     private val closeButton: CloseButton
@@ -18,11 +23,18 @@ object CloseButtonFactory{
         closeButton = CloseButton(closeItemStack)
     }
 
+    /**
+     * Get a [CloseButton] as Clickable
+     * @return Returns a [CloseButton] with a barrier as icon and the correct lore and name
+     */
     fun getCloseButton(): Clickable{
         return closeButton
     }
 }
 
+/**
+ * A [Clickable] item that closes the current GUI
+ */
 internal class CloseButton(itemStack: ItemStack) : Clickable(itemStack) {
 
     override fun onClick(player: Player) {
