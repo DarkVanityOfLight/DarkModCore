@@ -18,12 +18,12 @@ object CloseButtonFactory{
         closeButton = CloseButton(closeItemStack)
     }
 
-    fun getCloseButton(): CloseButton{
+    fun getCloseButton(): Clickable{
         return closeButton
     }
 }
 
-class CloseButton(itemStack: ItemStack) : Clickable(itemStack) {
+internal class CloseButton(itemStack: ItemStack) : Clickable(itemStack) {
 
     override fun onClick(player: Player) {
         GUIManager.forceClose(player)
