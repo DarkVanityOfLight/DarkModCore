@@ -38,7 +38,7 @@ bukkit {
     meta {
         name = pluginName
         description = pluginDescription
-        main = group + '.' + pluginName + '.' + 'Main'
+        main = "com.github.darkvanityoflight.recraftedcore.Main"
         version = version
         authors = pluginAuthors
     }
