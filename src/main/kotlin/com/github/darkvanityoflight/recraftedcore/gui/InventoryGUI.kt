@@ -21,7 +21,7 @@ import org.bukkit.inventory.Inventory
  */
 class InventoryGUI(private val bukkitWrapper: BukkitWrapper = BukkitWrapper()) {
     private lateinit var inventory: Inventory
-    private var clickableItems: Array<DisplayItem?> = Array(inventory.size) { null }
+    private val clickableItems: Array<DisplayItem?> by lazy{ Array(inventory.size) { null }}
 
     /**
      * Creates a new InventoryGUI using a specific inventory type and
