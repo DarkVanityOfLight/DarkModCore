@@ -19,7 +19,7 @@ import org.bukkit.inventory.Inventory
  * @constructor Construct using a specific inventory type and a title
  * @constructor Construct using a inventory size and a title the size has to be dividable by 9 and can't be bigger then 54
  */
-class InventoryGUI(private val bukkitWrapper: BukkitWrapper = BukkitWrapper()) {
+class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
     private lateinit var inventory: Inventory
     private val clickableItems: Array<DisplayItem?> by lazy{ Array(inventory.size) { null }}
 
@@ -29,7 +29,7 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper = BukkitWrapper()) {
      * @param type The inventory type, eg. CHEST
      * @param title The title of the inventory gui, this can't be bigger then 32
      */
-    constructor(type: InventoryType, title: String) : this() {
+    constructor(type: InventoryType, title: String, bukkitWrapper: BukkitWrapper = BukkitWrapper()) : this(bukkitWrapper) {
         if (title.length > 32){
             bukkitWrapper.warning("InventoryGUI $title exceeds bukkits maximum title length(32)")
             val title = title.substring(0, 32)
@@ -43,7 +43,7 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper = BukkitWrapper()) {
      * @param size The size of the inventory, has to be dividable by 9 and can't be bigger then 54
      *@param title The title of the inventory gui, this can't be bigger then 32
      */
-    constructor(size: Int, title: String): this(){
+    constructor(size: Int, title: String, bukkitWrapper: BukkitWrapper = BukkitWrapper()): this(bukkitWrapper){
         if (title.length > 32){
             bukkitWrapper.warning("InventoryGUI $title exceeds bukkits maximum title length(32)")
             val title = title.substring(0, 32)
