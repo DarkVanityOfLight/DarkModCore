@@ -1,6 +1,7 @@
 package com.github.darkvanityoflight.recraftedcore.gui
 
 import com.github.darkvanityoflight.recraftedcore.api.BukkitWrapper
+import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryType
 import org.bukkit.inventory.Inventory
@@ -89,7 +90,7 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
      * @param index The index of the item which got clicked
      */
     fun itemClick(player: Player, index: Int){
-        if (index < clickableItems.size || index < 0 || clickableItems[index] == null){
+        if (index > clickableItems.size || index < 0 || clickableItems[index] == null){
             return
         }
 
