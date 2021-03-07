@@ -1,6 +1,7 @@
 package com.github.darkvanityoflight.recraftedcore.gui.elements
 
 import com.github.darkvanityoflight.recraftedcore.gui.Clickable
+import com.github.darkvanityoflight.recraftedcore.gui.DisplayItem
 import com.github.darkvanityoflight.recraftedcore.gui.GUIManager
 import com.github.darkvanityoflight.recraftedcore.utils.itemutils.setLore
 import com.github.darkvanityoflight.recraftedcore.utils.itemutils.setName
@@ -39,5 +40,9 @@ internal class CloseButton(itemStack: ItemStack) : Clickable(itemStack) {
 
     override fun onClick(player: Player) {
         GUIManager.forceClose(player)
+    }
+
+    override fun clone(): DisplayItem {
+        return CloseButton(itemStack)
     }
 }
