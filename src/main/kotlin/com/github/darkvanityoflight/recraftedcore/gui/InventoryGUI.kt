@@ -5,6 +5,7 @@ import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryType
 import org.bukkit.inventory.Inventory
+import org.junit.Test
 
 /**
  * @author DarkVanityOfLight
@@ -23,6 +24,9 @@ import org.bukkit.inventory.Inventory
 class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
     private lateinit var inventory: Inventory
     private val clickableItems: Array<DisplayItem?> by lazy{ Array(inventory.size) { null }}
+    private var type: InventoryType? = null
+    private var title: String? = null
+    private var size: Int? = null
 
     /**
      * Creates a new InventoryGUI using a specific inventory type and
@@ -36,6 +40,8 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
             val title = title.substring(0, 32)
         }
         this.inventory = bukkitWrapper.createInventory(null, type, title)
+        this.type = type
+        this.title = title
     }
 
     /**
@@ -50,6 +56,8 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
             val title = title.substring(0, 32)
         }
         this.inventory = bukkitWrapper.createInventory(null, size, title)
+        this.size = size
+        this.title = title
     }
 
     /**
@@ -130,6 +138,23 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
                 show(player)
             }
         }
+    }
+
+    fun clone(): InventoryGUI{
+        val invGui: InventoryGUI = if (type != null){
+            InventoryGUI(type!!, title!!)
+        }else{
+            InventoryGUI(size!!, title!!)
+        }
+
+        for (slotNum in 0..size!!){
+            val item = getSlot(slotNum)
+            if (item != null){
+                invGui.setSlot(item, slotNum)
+            }
+        }
+
+        return invGui
     }
 
 }
