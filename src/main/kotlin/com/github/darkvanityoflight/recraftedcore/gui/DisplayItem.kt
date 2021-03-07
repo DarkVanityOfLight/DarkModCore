@@ -13,4 +13,9 @@ import org.bukkit.inventory.ItemStack
  */
 interface DisplayItem {
     val itemStack: ItemStack
+
+    /**
+     * Clone this DisplayItem
+     */
+    fun clone(): DisplayItem
 }
