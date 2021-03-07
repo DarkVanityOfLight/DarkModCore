@@ -140,6 +140,10 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
         }
     }
 
+    /**
+     * Clone this InventoryGUI
+     * @return An exact copy of this GUI
+     */
     fun clone(): InventoryGUI{
         val invGui: InventoryGUI = if (type != null){
             InventoryGUI(type!!, title!!)
