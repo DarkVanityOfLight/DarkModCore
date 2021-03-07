@@ -161,4 +161,11 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
         return invGui
     }
 
+    /**
+     * Get the size of this inventory
+     * @return The size of the inventory
+     */
+    fun getSize(): Int{
+        return clickableItems.size
+    }
 }
