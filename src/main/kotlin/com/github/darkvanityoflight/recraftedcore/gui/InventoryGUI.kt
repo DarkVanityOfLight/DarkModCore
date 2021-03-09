@@ -151,7 +151,7 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
             InventoryGUI(size!!, title!!)
         }
 
-        for (slotNum in 0..size!!){
+        for (slotNum in 0 until size!!){
             val item = getSlot(slotNum)
             if (item != null){
                 invGui.setSlot(item, slotNum)
