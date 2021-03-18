@@ -1,11 +1,9 @@
 package com.github.darkvanityoflight.recraftedcore.gui
 
 import com.github.darkvanityoflight.recraftedcore.api.BukkitWrapper
-import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryType
 import org.bukkit.inventory.Inventory
-import org.junit.Test
 
 /**
  * @author DarkVanityOfLight
