@@ -88,7 +88,15 @@ class InventoryGUI(private val bukkitWrapper: BukkitWrapper) {
      * @param displayItem The item to display
      */
     fun addItem(displayItem: DisplayItem){
-        clickableItems.forEachIndexed { index, i -> if (i == null) clickableItems[index] = displayItem }
+        var index = 0
+        for (item in clickableItems){
+            if (item == null){
+                clickableItems[index] = displayItem
+                break
+            }
+            index++
+        }
+
         inventory.addItem(displayItem.itemStack)
     }
 
