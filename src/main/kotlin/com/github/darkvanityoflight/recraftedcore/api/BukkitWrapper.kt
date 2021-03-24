@@ -76,4 +76,8 @@ open class BukkitWrapper{
     open fun createInventory(holder: InventoryHolder?, size: Int, title: String): Inventory {
         return Bukkit.createInventory(holder, size, title)
     }
+
+    open fun getOnlinePlayers(): Set<Player>{
+        return Bukkit.getOnlinePlayers().toSet()
+    }
 }
