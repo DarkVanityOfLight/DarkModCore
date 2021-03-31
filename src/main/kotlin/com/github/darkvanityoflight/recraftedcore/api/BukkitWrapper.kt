@@ -7,6 +7,7 @@ import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryType
 import org.bukkit.inventory.Inventory
 import org.bukkit.inventory.InventoryHolder
+import org.bukkit.plugin.PluginManager
 import java.util.*
 import java.util.logging.Level
 
@@ -79,5 +80,9 @@ open class BukkitWrapper{
 
     open fun getOnlinePlayers(): Set<Player>{
         return Bukkit.getOnlinePlayers().toSet()
+    }
+
+    open fun getPluginManager(): PluginManager{
+        return Bukkit.getPluginManager()
     }
 }
