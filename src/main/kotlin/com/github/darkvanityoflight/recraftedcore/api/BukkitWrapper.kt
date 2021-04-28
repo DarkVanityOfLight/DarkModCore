@@ -1,6 +1,7 @@
 package com.github.darkvanityoflight.recraftedcore.api
 
 import org.bukkit.Bukkit
+import org.bukkit.Server
 import org.bukkit.boss.BarColor
 import org.bukkit.boss.BarStyle
 import org.bukkit.entity.Player
@@ -84,5 +85,9 @@ open class BukkitWrapper{
 
     open fun getPluginManager(): PluginManager{
         return Bukkit.getPluginManager()
+    }
+
+    open fun getServer(): Server {
+        return Bukkit.getServer()
     }
 }
