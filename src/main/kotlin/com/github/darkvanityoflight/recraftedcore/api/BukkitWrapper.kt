@@ -99,4 +99,8 @@ open class BukkitWrapper{
     open fun getWorld(name: String): World?{
         return Bukkit.getWorld(name)
     }
+
+    open fun getPlayer(name: String): Player?{
+        return Bukkit.getPlayer(name)
+    }
 }
