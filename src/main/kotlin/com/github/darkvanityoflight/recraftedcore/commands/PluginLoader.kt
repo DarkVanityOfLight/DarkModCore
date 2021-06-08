@@ -17,8 +17,7 @@ class PluginLoader(val plugin: ARecraftedPlugin) : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
         return if (sender is Player) {
             if (sender.hasPermission("recraftedcore.loadPlugin")) {
-
-
+                loadPlugin(args.joinToString())
                 true
             } else {
                 sender.sendMessage("You aren't allowed to load a plugin dumbass")
@@ -77,7 +76,7 @@ class PluginLoader(val plugin: ARecraftedPlugin) : CommandExecutor {
         }
     }
 
-    fun getPlugin(p: String?): Plugin? {
+    private fun getPlugin(p: String?): Plugin? {
         for (pl in plugin.server.pluginManager.plugins) {
             if (pl.description.name.equals(p, ignoreCase = true)) {
                 return pl
