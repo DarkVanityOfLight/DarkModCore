@@ -25,8 +25,10 @@ class GUIListener: Listener {
         val player = e.whoClicked as Player
         val inv = GUIManager.getOpenInventory(player)
 
-        e.isCancelled = true
-        inv?.itemClick(player, e.rawSlot)
+        if(inv != null){
+            e.isCancelled = true
+            inv.itemClick(player, e.rawSlot)
+        }
     }
 
     @EventHandler(ignoreCancelled = true)
