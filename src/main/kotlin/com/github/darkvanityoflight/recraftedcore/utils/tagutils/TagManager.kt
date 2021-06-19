@@ -1,7 +1,9 @@
 package com.github.darkvanityoflight.recraftedcore.utils.tagutils
 
 import com.github.darkvanityoflight.recraftedcore.ARecraftedPlugin
+import com.github.darkvanityoflight.recraftedcore.utils.tagutils.persistentdatatypes.BooleanItemTagType
 import com.github.darkvanityoflight.recraftedcore.utils.tagutils.persistentdatatypes.StringArrayItemTagType
+import org.bukkit.Material
 import org.bukkit.NamespacedKey
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
@@ -62,6 +64,10 @@ class TagManager {
 
     fun getOther(key: NamespacedKey, persistentDataType: PersistentDataType<Any, Any>) : Any? {
         return persistentDataContainer.get(key, persistentDataType)
+    }
+
+    fun <T>getOtherWithType(key: NamespacedKey, persistentDataType: PersistentDataType<Any, Any>) : T? {
+        return persistentDataContainer.get(key, persistentDataType) as? T
     }
 
     fun setString(key: NamespacedKey, string: String) {
