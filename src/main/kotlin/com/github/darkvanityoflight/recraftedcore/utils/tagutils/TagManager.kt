@@ -102,7 +102,7 @@ class TagManager {
         persistentDataContainer.set(key, PersistentDataType.TAG_CONTAINER_ARRAY, tagContainerArray)
     }
 
-    fun setOther(key: NamespacedKey, type: PersistentDataType<Any, Any>, value: PersistentDataType<Any, Any>) {
+    fun setOther(key: NamespacedKey, type: PersistentDataType<Any, Any>, value: Any) {
         persistentDataContainer.set(key, type, value)
     }
 
