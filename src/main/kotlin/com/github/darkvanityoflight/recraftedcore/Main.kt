@@ -1,5 +1,6 @@
 package com.github.darkvanityoflight.recraftedcore
 
+import com.github.darkvanityoflight.recraftedcore.commands.Pav
 import com.github.darkvanityoflight.recraftedcore.commands.PluginLoader
 import com.github.darkvanityoflight.recraftedcore.commands.PluginUnloader
 import com.github.darkvanityoflight.recraftedcore.configparser.ConfigParser
@@ -18,6 +19,7 @@ class Main : ARecraftedPlugin() {
 
         this.getCommand("load")?.setExecutor(PluginLoader(this))
         this.getCommand("unload")?.setExecutor(PluginUnloader(this))
+        this.getCommand("pav")?.setExecutor(Pav())
     }
 
     companion object {
